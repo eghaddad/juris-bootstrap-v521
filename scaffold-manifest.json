@@ -1,0 +1,24 @@
+{
+  "tech_stack": {
+    "backend": "nestjs",
+    "frontend": "next.js",
+    "database": "postgresql",
+    "orm": "typeorm"
+  },
+  "entities_generated": ["contract.entity.ts"],
+  "routes_generated": ["health.controller.ts", "contracts.controller.ts"],
+  "structure": {
+    "apps/api": true,
+    "apps/web": true
+  },
+  "source_artifacts": {
+    "product_vision": "sha256:e54ba8dde533a6444c5f224035ebebc57c4e3b3bed66fcccc977f0d822506ae6",
+    "technical_requirements": "sha256:11944c5cea436bfb97122235b579a2b09d81d685e28d2cd69c67cbbc33d5c390",
+    "api_design": "sha256:b1f77521cca7fba1e4e11332003894c1f95d03008bfddcecdbbcbd788c740724",
+    "frontend_design": "sha256:52477d78b9550c201a1b9777bd5ce7624b05ba1c80de7bc8854583d5be806a6d",
+    "data_model": "sha256:813a17893f4fbaf3cfd6a6d7ff6434c8c69e72fd456284abdc98fb9ea5e919d8",
+    "deployment_architecture": "sha256:887a3a48c66f76b33a3a5f7336555e93ea5f7d1c7b9380861ceab1cc522c239b",
+    "cicd_strategy": "sha256:90446aa507176b42344e867deadb7798f1ba3af725f266aea378e818a71d3d8a"
+  },
+  "generated_at": "2026-03-01T08:34:17Z"
+}
