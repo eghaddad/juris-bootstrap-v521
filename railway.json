@@ -2,10 +2,10 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "npm ci && npm run build --workspace=api"
+    "buildCommand": "npm ci && NODE_PATH=./node_modules npm run build --workspace=api"
   },
   "deploy": {
-    "startCommand": "node apps/api/dist/main.js",
+    "startCommand": "NODE_PATH=./node_modules node apps/api/dist/main.js",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
