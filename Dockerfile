@@ -1,0 +1,16 @@
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+COPY apps/api/package*.json ./apps/api/
+RUN npm ci
+COPY apps/api ./apps/api
+RUN cd apps/api && npm run build
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/apps/api/dist ./dist
+COPY --from=builder /app/apps/api/package*.json ./
+ENV NODE_ENV=production
+EXPOSE 3000
+CMD ["node", "dist/main.js"]
